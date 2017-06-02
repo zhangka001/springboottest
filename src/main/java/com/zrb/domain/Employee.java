@@ -8,6 +8,16 @@ public class Employee {
     private Integer age;
     private Double salary;
 
+    public Employee(){}
+    public Employee(Integer age){
+        this.age = age;
+    }
+
+    public Employee(String name,Integer age){
+        this.name = name;
+        this.age = age;
+    }
+
     public Employee(String name, Integer age, Double salary) {
         this.name = name;
         this.age = age;
