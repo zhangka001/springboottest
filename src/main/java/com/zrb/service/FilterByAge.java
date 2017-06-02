@@ -8,6 +8,6 @@ import com.zrb.domain.Employee;
 public class FilterByAge implements Mypredicates<Employee>{
     @Override
     public boolean test(Employee employee) {
-        return employee.getAge() >20;
+        return employee.getAge() >30;
     }
 }
