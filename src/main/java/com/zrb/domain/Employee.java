@@ -24,6 +24,26 @@ public class Employee {
         this.salary = salary;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Employee employee = (Employee) o;
+
+        if (!name.equals(employee.name)) return false;
+        if (!age.equals(employee.age)) return false;
+        return salary.equals(employee.salary);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name.hashCode();
+        result = 31 * result + age.hashCode();
+        result = 31 * result + salary.hashCode();
+        return result;
+    }
+
     public String getName() {
         return name;
     }
