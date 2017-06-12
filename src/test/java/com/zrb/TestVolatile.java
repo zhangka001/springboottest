@@ -1,8 +1,12 @@
 package com.zrb;
 
 /**
- * Created by zrb on 2017/6/5.
+ * volatile : 当多个线程操作共享数据 ，可以保证内存中的数据是可见的
+ * 注意：
+ *      volatile：不具有互斥性，是轻量级的同步策略
+ *                不能保证原子性
  */
+
 public class TestVolatile {
 
     public static void main(String[] args){
@@ -19,7 +23,7 @@ public class TestVolatile {
 }
 
 class ThreadDemo implements Runnable{
-    private valation boolean flag = false;
+    private volatile boolean flag = false;
 
     @Override
     public void run(){
